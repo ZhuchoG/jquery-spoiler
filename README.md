@@ -13,7 +13,7 @@ jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery
   ```html
   <script src="jquery.spoiler.min.js"></script>
   ```
-  Be sure to include jQuery `>=` 1.10.2 (including jQuery 2) before loading jQuery Spoiler!
+  Be sure to include jQuery `>=` 1.10.0 (including jQuery 2) before loading jQuery Spoiler!
 
 3. **Wrap and Activate**
   ```html
@@ -30,7 +30,7 @@ jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery
 ## Options ##
 Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitations) below).
 
-* **paddingValue**
+* **enablePadding**
   * Type: `boolean`
   * Default: `true`
   * Optional: yes
