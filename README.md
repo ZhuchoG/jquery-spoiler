@@ -5,26 +5,27 @@
 jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery-powered spoiler system. With quick setup, very small requirements, and user-controllable styling, jQuery Spoiler puts the developer in control, and will run most anywhere jQuery and jQuery plugins are supported.
 
 ## Installation ##
-1. Download
+1. **Download**
   * From GitHub:
   Download either the uncompressed or minified version or the latest [release](https://github.com/le717/jquery-spoiler/releases) (recommended).
 
-2. Include
-```html
-<script src="jquery.spoiler.min.js"></script>
-```
-Be sure to include jQuery `>=` 1.10.2 (including jQuery 2) before loading jQuery Spoiler!
+2. **Include**
+  ```html
+  <script src="jquery.spoiler.min.js"></script>
+  ```
+  Be sure to include jQuery `>=` 1.10.2 (including jQuery 2) before loading jQuery Spoiler!
 
-3. Wrap and Activate
-```html
-  <div class="spoiler">Insert content to be spoilered here.</div>
-```
-```js
-  $(".spoiler").spoiler();
-```
+3. **Wrap and Activate**
+  ```html
+    <div class="spoiler">Insert content to be spoilered here.</div>
+  ```
+  ```js
+    $(".spoiler").spoiler();
+  ```
 
-4. Apply Your CSS
-You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and for the show/hide button active/inactive states. Aside from an `overflow: hidden;` CSS attribute applied to the spoilered content, which is automatically handed, and editing of the `height` content's height attribute (how jQuery Spoiler operates), no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
+4. **Apply Your CSS**
+
+  You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and for the show/hide button active/inactive states. Aside from an `overflow: hidden;` CSS attribute applied to the spoilered content, which is automatically handed, and editing of the `height` content's height attribute (how jQuery Spoiler operates), no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
 
 ## Options ##
 Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitations) below).
