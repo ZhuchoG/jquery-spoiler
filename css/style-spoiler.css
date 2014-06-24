@@ -76,6 +76,14 @@ p {
   width: 100%;
 }
 
+/* ------- Download area ------- */
+.download {
+  font-size: 3em;
+}
+
+.download p {
+  margin-bottom: -0.4em;
+}
 
 /* ------- Spoiler CSS ------- */
 
