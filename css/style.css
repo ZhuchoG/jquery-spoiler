@@ -28,6 +28,7 @@ a {
   color: #fff;
   text-shadow: 1px 0 3px #000;
   text-decoration: none;
+  font-weight: 700;
 }
 a:hover { text-decoration: underline; }
 
