@@ -62,12 +62,6 @@ p {
 /* ------- Header -------- */
 .header { padding-bottom: 10px; }
 
-.header h1 {
-  display: inline-block;
-  position: absolute;
-  top: 0.5em;
-  margin-left: 0.2em;
-}
 @media only screen and (max-width: 720px) {
   .header h1 { top: 1em; }
 }
