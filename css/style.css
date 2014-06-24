@@ -1,6 +1,43 @@
+html {
+  position: relative;
+  min-height: 100%;
+  min-width: 320px;
+}
+
+body {
+  font-family: "Ubuntu", "Open Sans", Arial, sans-serif;
+  background-color: #0080c9;
+  background: #0080c9 url("/img/bg.png") repeat fixed;
+  color: #fff;
+  margin-bottom: 8em;
+}
+
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-normal { font-weight: 400; }
 .text-bold { font-weight: 700; }
 .text-italic { font-style: italic; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 7.8em;
+  width: 100%;
+}
+
+
+/* ------- Spoiler CSS ------- */
+
+.spoiler {
+
+}
+
+.btn-spoiler {
+
+}
+
+.btn-spoiler span {
+
+}
