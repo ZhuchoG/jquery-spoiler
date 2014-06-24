@@ -6,7 +6,7 @@
         "spoiler",
         "spoilers"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name": "Triangle717",
         "url": "https://Triangle717.WordPress.com",
@@ -22,6 +22,6 @@
     "homepage": "https://github.com/le717/jquery-spoiler",
     "docs": "https://github.com/le717/jquery-spoiler",
     "dependencies": {
-        "jquery": ">=2.1.1"
+        "jquery": ">=1.10.0"
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "jquery-spoiler",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Triangle717 (http://Triangle717.WordPress.com)",
     "description": "jQuery plugin for a quick and easy spoiler system.",
     "license": "MIT",
@@ -24,9 +24,12 @@
         "README.md"
     ],
     "homepage": "https://github.com/le717/jquery-spoiler",
-    "devDependencies": {
-        "grunt": ">=0.4.5",
-        "grunt-contrib-jshint": ">=0.10.0",
-        "grunt-contrib-uglify": ">=0.5.0"
+    "dependencies": {
+        "jquery": ">=1.10.0"
     }
+    "devDependencies": {
+    "grunt": ">=0.4.5",
+    "grunt-contrib-jshint": ">=0.10.0",
+    "grunt-contrib-uglify": ">=0.5.0"
+}
 }
