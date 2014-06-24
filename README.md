@@ -16,7 +16,7 @@ jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery
 Be sure to include jQuery `>=` 1.10.2 (including jQuery 2) before loading jQuery Spoiler!
 
 3. Wrap and Activate
-```
+```html
   <div class="spoiler">Insert content to be spoilered here.</div>
 ```
 ```js
