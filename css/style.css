@@ -1,3 +1,15 @@
+::-moz-selection {
+  background-color: #23ac1b;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #23ac1b;
+  color: #000;
+  text-shadow: none;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -12,6 +24,13 @@ body {
   margin-bottom: 8em;
 }
 
+a {
+  color: #fff;
+  text-shadow: 1px 0 3px #000;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -19,6 +38,34 @@ body {
 .text-bold { font-weight: 700; }
 .text-italic { font-style: italic; }
 
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 720px) {
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ------- Header -------- */
+.header { padding-bottom: 10px; }
+
+.header h1 {
+  display: inline-block;
+  position: absolute;
+  top: 0.5em;
+  margin-left: 0.2em;
+}
+@media only screen and (max-width: 720px) {
+  .header h1 { top: 1em; }
+}
+
+/* ------- Footer -------*/
+/* http://mystrd.at/modern-clean-css-sticky-footer/ */
 .footer {
   position: absolute;
   left: 0;
