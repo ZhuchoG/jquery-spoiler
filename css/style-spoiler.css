@@ -92,7 +92,7 @@ p {
 }
 
 .btn-spoiler {
-
+  cursor: pointer;
 }
 
 .btn-spoiler span {
