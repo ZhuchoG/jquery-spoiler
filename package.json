@@ -21,6 +21,8 @@
     ],
     "files": [
         "jquery.spoiler.js",
+        "jquery.spoiler.min.js",
+        "LICENSE",
         "README.md"
     ],
     "homepage": "https://github.com/le717/jquery-spoiler",
