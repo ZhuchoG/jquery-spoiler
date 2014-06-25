@@ -1,6 +1,6 @@
 {
     "name": "jquery-spoiler",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "jquery.spoiler.js",
     "ignore": [
         "*.json",

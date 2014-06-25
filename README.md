@@ -1,8 +1,8 @@
 # jQuery Spoiler #
-> jQuery plugin for a quick and easy spoiler system.
+> A simple and customizable spoiler system, all in a jQuery plugin
 
 ## Features ##
-jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery-powered spoiler system. With quick setup, very small requirements, and user-controllable styling, jQuery Spoiler puts the developer in control, and will run most anywhere jQuery and jQuery plugins are supported.
+**jQuery Spoiler** is a very minimal and lightweight jQuery-powered spoiler system. With quick setup, very small requirements, and user-controllable styling, jQuery Spoiler puts the developer in control.
 
 ## Installation ##
 1. **Download**
@@ -13,7 +13,7 @@ jQuery Spoiler is a very minimal, lightweight (approx. 310 bytes gzip'ed) jQuery
   ```html
   <script src="jquery.spoiler.min.js"></script>
   ```
-  Be sure to include jQuery `>=` 1.10.0 (including jQuery 2) before loading jQuery Spoiler!
+  Be sure to include jQuery `>=` 1.10.0 before loading jQuery Spoiler!
 
 3. **Wrap and Activate**
   ```html
@@ -53,7 +53,7 @@ Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitat
   * Type: `string`
   * Default: `btn-spoiler`
   * Optional: yes
-  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `foo-bar` format (see [Limitations](#limitations) below). This class contains a nested `span` element which controls the placement of `buttonName`.
+  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `btn-bar` format (see [Limitations](#limitations) below). This class contains a nested `span` element which controls the placement of `buttonName`.
 
 * **buttonActiveClass**
   * Type: `string`
@@ -68,7 +68,7 @@ Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitat
   * Description: When spoilered content has been revealed, the content now shown is assigned to this class to indicate the content is visible. This is the class any container and expansion/contraction styling would be a part of. Unlike `buttonClass`, this name can be in any format.
 
 ## Limitations ##
-* You are restricted to button class names (`buttonClass`) that follow the format `foo-bar`. Anything not in this format will cause the script to break.
+* You are restricted to button class names (`buttonClass`) that follow the format `btn-bar`. Anything not in this format will cause the script to break.
 * The base spoiler class and button class (`buttonClass`) must be the same. Having a spoiler class of `spoiler` but a button class of `hidden-stuff` will fail.
 This is because the base spoiler class name is stripped from the button name (see above limitation).
 * The spoilers and buttons are numbered starting from `0` (zero). I would rather them start at `1` (one).
