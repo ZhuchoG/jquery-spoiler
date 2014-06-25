@@ -38,7 +38,9 @@
 
       // Get the height of the content to be spoilered now,
       // as once we hide the text it cannot be restored.
-      spoilerHeights.push($this.css("height"));
+      // Use the value of `scrollHeight`, which does not change
+      // even if a height is applied through CSS.
+      spoilerHeights.push($this[0].scrollHeight + "px");
     });
 
     // Add the toggle button

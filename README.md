@@ -27,6 +27,8 @@
 
   You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and for the show/hide button active/inactive states. Aside from an `overflow: hidden;` CSS attribute applied to the spoilered content, which is automatically handed, and editing of the `height` content's height attribute (how jQuery Spoiler operates), no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
 
+  If you wish for the spoilered content to remain hidden in the case JavaScript has been disabled or is not available on a client device, add an `overflow: hidden;` attribute to the spoiler class in your CSS. Otherwise, the spoilered content will be visible.
+
 ## Options ##
 Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitations) below).
 
@@ -71,7 +73,6 @@ Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitat
 * You are restricted to button class names (`buttonClass`) that follow the format `btn-bar`. Anything not in this format will cause the script to break.
 * The base spoiler class and button class (`buttonClass`) must be the same. Having a spoiler class of `spoiler` but a button class of `hidden-stuff` will fail.
 This is because the base spoiler class name is stripped from the button name (see above limitation).
-* The spoilers and buttons are numbered starting from `0` (zero). I would rather them start at `1` (one).
 
 ## Issues ##
 If you find a bug or have a suggestion for jQuery Spoiler, feel free to open an [issue](https://github.com/le717/jquery-spoiler/issues). Be sure to check if your particular issue has not already been reported or is part of the limitations as listed above first. Pull requests with bug fixes and/or new features are also welcome at any time. :smiley:
