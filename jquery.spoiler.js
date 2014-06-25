@@ -38,8 +38,6 @@
 
       // Get the height of the content to be spoilered now,
       // as once we hide the text it cannot be restored.
-      // Add `paddingValue` for a bit of extra space to
-      // prevent content from being cut off.
       spoilerHeights.push($this.css("height"));
     });
 
@@ -72,13 +70,12 @@
         hideContent["padding-bottom"] = "";
       }
 
-      // Upon clicking the spoiler button,
-      // if the content is hidden, reveal it.
-      // Otherwise, hide it.
+      // If the content is shown, hide it
       if ($this.hasClass(settings.spoilerVisibleClass)) {
-        $this.css({"height": "0", "padding-bottom": ""});
+        $this.css(hideContent);
+        // Otherwise, reveal it
       } else {
-        $this.css({"height": spoilerHeights[spoilerNum], "padding-bottom": settings.paddingValue});
+        $this.css(showContent);
       }
 
       // Toggle between active classes for both button and container
