@@ -1,11 +1,11 @@
 ::-moz-selection {
-  background-color: #23ac1b;
+  background-color: rgba(35, 172, 27, 0.72);
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #23ac1b;
+  background-color: rgba(35, 172, 27, 0.72);
   color: #000;
   text-shadow: none;
 }
@@ -21,7 +21,7 @@ body {
   background-color: #0080c9;
   background: #0080c9 url("img/bg-spoiler.png") repeat fixed;
   color: #fff;
-  margin-bottom: 8em;
+  margin-bottom: 9em;
 }
 
 a {
@@ -76,7 +76,7 @@ p {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 7.8em;
+  height: 9em;
   width: 100%;
 }
 
@@ -92,13 +92,38 @@ p {
 /* ------- Spoiler CSS ------- */
 
 .spoiler {
-
+  -webkit-transition: height 0.7s ease-out;
+          transition: height 0.7s ease-out;
 }
 
 .btn-spoiler {
+  width: 4em;
+  height: 1.6em;
+/*  background-color: rgba(35, 172, 27, 0.72);*/
+  display: inline-block;
+  border-radius: 5px;
   cursor: pointer;
+
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-duration: 0.5s, 0.7s;
+  -webkit-transition-timing-function: ease;
+
+  transition-property: background-color, color;
+  transition-duration: 0.5s, 0.7s;
+  transition-timing-function: ease;
 }
 
 .btn-spoiler span {
+  position: relative;
+  left: 0.5em;
+  top: 0.16em;
+}
 
+.btn-spoiler span:hover { text-shadow: 1px 1px 7px #000; }
+
+.btn-spoiler-active {
+/*
+  color: #000;
+  background-color: rgb(255, 255, 0);
+*/
 }
