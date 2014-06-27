@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Roboto", Arial, sans-serif;
   margin-bottom: 9em;
+  background-color: #fffcfc;
 }
 
 a {
@@ -39,20 +40,20 @@ ul { list-style: none; }
 
 li { margin-left: -2.5em; }
 
-/*
 pre {
+  font-family: "Coda", monospace;
+/*
   background-color: #e8dada;
   overflow: auto;
   color: #463232;
-  font-family: "Coda", monospace;
   width: 25%;
   padding: 10px;
   margin-left: 2.5em;
   margin-right: 2.5em;
   border-radius: 20px;
   border: 2px solid rgba(35, 172, 27, 0.72);
-}
 */
+}
 
 /* Commonly used alignments and type styles */
 .text-left { text-align: left; }
@@ -108,15 +109,11 @@ pre {
 }
 
 /* ------- Download area ------- */
-.download { margin-top: -0.4em; }
-
-.download .icon {
+.download .ion {
   font-size: 3em;
   position: relative;
-  bottom: 0.4em;
+  margin-bottom: 0.4em;
 }
-
-.download span:hover { color: rgba(0, 0, 0, 0.7); }
 
 /* ------- Spoiler CSS ------- */
 .spoiler {

@@ -27,6 +27,8 @@
       </ul>
   </div>
 
+<!--  <noscript>Uh-oh, no JavaScript!</noscript>-->
+
   <h1 class="text-center">Usage</h1>
   <div>
     <pre>
@@ -43,11 +45,17 @@
     </pre>
   </div>
 
+  <h1 class="text-center">Download</h1>
+  <div class="download text-center">
+    <p class="text-larger"></p>
+    <a title="Download latest version" href="https://github.com/le717/jquery-spoiler/archive/master.zip"><span class="ion ion-code-download"></span></a>
+  </div>
+
   <h1 class="text-center">Demo</h1>
-  <h3>Demo #1 - Text</h3>
+  <h4>Demo #1 - Text</h4>
   <div class="spoiler" id="spoiler-text"><p>This is some text. It is hidden in a spoiler. :D</p></div>
 
-  <h3>Demo #2 - Image</h3>
+  <h4>Demo #2 - Image</h4>
   <div class="spoiler" id="spoiler-image">
     <img class="img-responsive" width="200" height="200" alt="Triangle717 logo" src="/img/Triangle717-Logo.svg" />
   </div>
@@ -56,14 +64,10 @@
   <p class="text-center text-larger">Complete documention can be found on <a href="https://github.com/le717/jquery-spoiler#readme" target="_blank">GitHub</a>.</p><br>
 
   <div class="footer text-center">
-    <p>Created <span class="current-year"></span> <a target="_blank" href="http://le717.github.io">Triangle717</a></p>
-    <p>Licensed under the <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">MIT License</a></p>
-
-    <a id="download"></a>
-    <div class="download">
-      <p class="text-small"></p>
-      <a title="Download latest version" href="#"><span class="icon ion-code-download"></span></a>
-    </div>
+    <p>
+      <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">The MIT License</a>
+      <br>Created <span class="current-year"></span> <a target="_blank" href="http://le717.github.io">Triangle717</a>
+    </p>
   </div>
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -91,10 +95,6 @@
           // Download latest release if version number can be gathered
           $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
           $(".download p").html("Latest version: " + data[0].tag_name);
-          },
-        error: function() {
-          // Otherwise, fall back to master branch
-          $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/master.zip");
         }
       });
     })(jQuery);
