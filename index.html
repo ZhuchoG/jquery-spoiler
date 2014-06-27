@@ -5,7 +5,7 @@
   <title>jQuery Spoiler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,700|Coda:400">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
   <link rel="stylesheet" href="css/style-spoiler.css">
 </head>
@@ -23,24 +23,27 @@
       <ul>
         <li>Only one CSS requirement</li>
         <li>Fully customizable CSS</li>
-        <li>Small size &lt; 2KB minified</li>
+        <li>Small size (&lt; 2KB minified)</li>
       </ul>
   </div>
 
-  <a id="usage"></a>
-  <h2 class="text-center">Usage</h2>
-
-  <div class="spoiler">
+  <!-- <h1 class="text-center">Usage</h1>
+  <div>
     <pre>
     &lt;script&gt;
       // Basic usage
       $(".spoiler").spoiler();
+
+      // Enabling some options
+      $(".spoiler").spoiler({
+          buttonName: "Hidden",
+          triggerEvents: true
+        });
     &lt;/script&gt;
     </pre>
-  </div>
+  </div> -->
 
-  <a id="demo"></a>
-  <h2 class="text-center">Demos</h2>
+  <h1 class="text-center">Demo</h1>
   <h3>Demo #1 - Text</h3>
   <div class="spoiler" id="spoiler-text"><p>This is some text. It is hidden in a spoiler. :D</p></div>
 
@@ -49,7 +52,9 @@
     <img class="img-responsive" width="200" height="200" alt="Triangle717 logo" src="/img/Triangle717-Logo.svg" />
   </div>
 
-<!--  <h2 class="text-center">Documentation</h2>-->
+  <h1 class="text-center">Documentation</h1>
+  <p class="text-center text-larger">Complete documention can be found on <a href="https://github.com/le717/jquery-spoiler#readme" target="_blank">GitHub</a>.</p>
+  <br><br>
 
   <div class="footer text-center">
     <p>Created <span class="current-year"></span> <a target="_blank" href="http://le717.github.io">Triangle717</a></p>
@@ -57,37 +62,43 @@
 
     <a id="download"></a>
     <div class="download">
+      <p class="text-small"></p>
       <a title="Download latest version" href="#"><span class="icon ion-code-download"></span></a>
     </div>
   </div>
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="jquery.spoiler.min.js"></script>
-  <script>
-    $(function() {
-      // Get the current year
-      var curYear = new Date().getUTCFullYear();
-      $(".current-year").html(curYear);
-    });
-
-    // Get latest release from GitHub Pages API
-    $.ajax({
-      dataType: "json",
-      url: "https://api.github.com/repos/le717/jquery-spoiler/releases",
-      success: function(data) {
-        // Download latest release if version number can be gathered
-        $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
-        },
-      error: function() {
-        // Otherwise, fall back to master branch
-        $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/master.zip");
-      }
-    });
-  </script>
 
   <!-- Activate jQuery Spoiler -->
   <script>
     jQuery(".spoiler").spoiler({enablePadding: false});
+  </script>
+
+  <script>
+    (function($) {
+    "use strict";
+      $(function() {
+        // Get the current year
+        var curYear = new Date().getUTCFullYear();
+        $(".current-year").html(curYear);
+      });
+
+      // Get latest release from GitHub Pages API
+      $.ajax({
+        dataType: "json",
+        url: "https://api.github.com/repos/le717/jquery-spoiler/releases",
+        success: function(data) {
+          // Download latest release if version number can be gathered
+          $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
+          $(".download p").html("Latest version: " + data[0].tag_name);
+          },
+        error: function() {
+          // Otherwise, fall back to master branch
+          $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/master.zip");
+        }
+      });
+    })(jQuery);
   </script>
 </body>
 </html>

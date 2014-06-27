@@ -35,6 +35,24 @@ p {
   margin-right: 1.5em;
 }
 
+ul { list-style: none; }
+
+li { margin-left: -2.5em; }
+
+pre {
+  background-color: #e8dada;
+  overflow: auto;
+  color: #463232;
+  font-family: "Coda", monospace;
+  width: 25%;
+  padding: 10px;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  border-radius: 20px;
+  border: 2px solid rgba(35, 172, 27, 0.72);
+}
+
+
 /* Commonly used alignments and type styles */
 .text-left { text-align: left; }
 .text-center { text-align: center; }
@@ -44,6 +62,8 @@ p {
 .text-italic { font-style: italic; }
 .text-small { font-size: 0.8em; }
 .text-smaller { font-size: 0.7em; }
+.text-large { font-size: 1.1em; }
+.text-larger { font-size: 1.2em; }
 .not-a-real-link { color: inherit; }
 
 .img-center {
@@ -62,12 +82,10 @@ p {
 /* ------- Header -------- */
 .header {
   margin-top: -3em;
-  margin-bottom: 4em;
+  margin-bottom: 2.2em;
 }
 
-.header h1 {
-  font-size: 4.7em;
-}
+.header h1 { font-size: 4.7em; }
 
 .header p {
   margin-top: -1.9em;
@@ -77,10 +95,6 @@ p {
 @media only screen and (max-width: 720px) {
   .header h1 { top: 1em; }
 }
-
-ul { list-style: none; }
-
-li { margin-left: -2.5em; }
 
 /* ------- Footer -------*/
 /* http://mystrd.at/modern-clean-css-sticky-footer/ */
@@ -93,9 +107,12 @@ li { margin-left: -2.5em; }
 }
 
 /* ------- Download area ------- */
-.download {
+.download { margin-top: -0.4em; }
+
+.download .icon {
   font-size: 3em;
-  margin-bottom: -0.4m;
+  position: relative;
+  bottom: 0.4em;
 }
 
 .download span:hover { color: rgba(0, 0, 0, 0.7); }
@@ -113,7 +130,8 @@ li { margin-left: -2.5em; }
   display: inline-block;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 0px 1px 1px rgb(75, 61, 61);
+  -webkit-box-shadow: 0 0 1px 1px rgb(75, 61, 61);
+          box-shadow: 0 0 1px 1px rgb(75, 61, 61);
 }
 
 .btn-spoiler span {
