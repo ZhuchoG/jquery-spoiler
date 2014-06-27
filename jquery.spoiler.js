@@ -12,19 +12,20 @@
   $.fn.spoiler = function(options) {
     // Default options
     var settings = $.extend({
-      enablePadding      : true,
-      paddingValue       : "6px",
       buttonName         : "Spoiler",
       buttonClass        : "btn-spoiler",
+      paddingValue       : "6px",
+      triggerEvents      : false,
+      includePadding     : true,
       buttonActiveClass  : "btn-spoiler-active",
       spoilerVisibleClass: "spoiler-visible"
     }, options);
 
     // Variables for usage
-    var spoilerID          = 0,
-        btnSpoilerID       = 0,
-        spoilerHeights     = [],
-        buttonClass        = "." + settings.buttonClass;
+    var btnID          = 0,
+        spoilerID      = 0,
+        buttonClass    = "." + settings.buttonClass,
+        spoilerHeights = [];
 
     // Assign IDs to each spoiler
     $(this).each(function() {
@@ -49,8 +50,8 @@
 
     // Add matching IDs to each toggle button
     $(buttonClass).each(function() {
-      $(this).attr("id", settings.buttonClass + "-" + btnSpoilerID);
-      btnSpoilerID += 1;
+      $(this).attr("id", settings.buttonClass + "-" + btnID);
+      btnID += 1;
     });
 
     // Now that we have the height, hide all content
@@ -60,24 +61,35 @@
       // Get the ID for the clicked spoiler button so only that one is triggered
       var spoilerID = "#" + $(this).attr("id").replace(/btn-/i, ""),
           spoilerNum = spoilerID.slice(spoilerID.length - 1),
-          $this  = $(spoilerID);
+          $this  = $(spoilerID); // Spoilered content
 
       // The container's collapsed/expanded height values
       var showContent = {"height": spoilerHeights[spoilerNum]},
           hideContent = {"height": "0"};
 
       // Add padding to bottom of container only if enabled
-      if (settings.enablePadding) {
-        showContent["padding-bottom"]= settings.paddingValue;
+      if (settings.includePadding) {
+        showContent["padding-bottom"] = settings.paddingValue;
         hideContent["padding-bottom"] = "";
       }
 
-      // If the content is shown, hide it
+      // Check if content is visible or not
+      var contentVisible = $this.hasClass(settings.spoilerVisibleClass);
+
+      // Hide/show content
       if ($this.hasClass(settings.spoilerVisibleClass)) {
         $this.css(hideContent);
-        // Otherwise, reveal it
       } else {
         $this.css(showContent);
+      }
+
+      // If enabled, trigger events upon show/hide
+      if (settings.triggerEvents) {
+        if (contentVisible) {
+          $($this).trigger("contenthidden");
+        } else {
+          $($this).trigger("contentvisible");
+        }
       }
 
       // Toggle between active classes for both button and container
