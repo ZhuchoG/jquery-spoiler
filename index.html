@@ -5,37 +5,39 @@
   <title>jQuery Spoiler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,700italic">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
   <link rel="stylesheet" href="css/style-spoiler.css">
 </head>
 
 <body>
-  <a target="_blank" href="https://github.com/le717/jquery-spoiler"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+  <a target="_blank" href="https://github.com/le717/jquery-spoiler"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
   <div class="header text-center">
     <h1>jQuery Spoiler</h1>
+    <p>Minimal, lightweight jQuery spoiler plugin</p>
   </div>
 
-  <p><span class="text-bold">jQuery Spoiler</span> is a very minimal and lightweight jQuery-powered spoiler system. With quick setup, very small requirements, and user-controllable styling, jQuery Spoiler puts the developer in control.</p>
+  <div class="text-center">
+    <h2>Just how minimal and lightweight?</h2>
+      <ul>
+        <li>Only one CSS requirement</li>
+        <li>Fully customizable CSS</li>
+        <li>Small size &lt; 2KB minified</li>
+      </ul>
+  </div>
 
-  <a id="install"></a>
-  <!-- <h2 class="text-center">Installation</h2>
+  <a id="usage"></a>
+  <h2 class="text-center">Usage</h2>
+
   <div class="spoiler">
-    <ol>
-      <li><a href="#download">Download</a> the latest version</li>
-      <li>Include jQuery and jQuery Spoiler in your HTML
-        <pre>&lt;script src="jquery.spoiler.min.js"&gt;&lt;/script&gt;</pre></li>
-      <li>Wrap the HTML and run the JavaScript
-      <pre>&lt;div class="spoiler"&gt;Insert content to be spoilered here.&lt;/div&gt;</pre>
-      <pre>$(".spoiler").spoiler();</pre>
-      </li>
-      <li>Write your CSS
-      <pre>.spoiler {<br>/* */<br>}<br><br>.btn-spoiler {<br>/* */<br>}<br><br>.btn-spoiler span {<br>/* */<br>}</pre>
-      </li>
-      <li><h4>Start spoiling!</h4></li>
-    </ol>
-  </div> -->
+    <pre>
+    &lt;script&gt;
+      // Basic usage
+      $(".spoiler").spoiler();
+    &lt;/script&gt;
+    </pre>
+  </div>
 
   <a id="demo"></a>
   <h2 class="text-center">Demos</h2>
@@ -47,8 +49,10 @@
     <img class="img-responsive" width="200" height="200" alt="Triangle717 logo" src="/img/Triangle717-Logo.svg" />
   </div>
 
-  <div class="footer text-center text-small">
-    <p>Created <span class="current-year"></span> <a target="_blank" href="http://Triangle717.WordPress.com">Triangle717</a></p>
+<!--  <h2 class="text-center">Documentation</h2>-->
+
+  <div class="footer text-center">
+    <p>Created <span class="current-year"></span> <a target="_blank" href="http://le717.github.io">Triangle717</a></p>
     <p>Licensed under the <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">MIT License</a></p>
 
     <a id="download"></a>
@@ -80,8 +84,10 @@
       }
     });
   </script>
+
+  <!-- Activate jQuery Spoiler -->
   <script>
-    jQuery(".spoiler").spoiler();
+    jQuery(".spoiler").spoiler({enablePadding: false});
   </script>
 </body>
 </html>
