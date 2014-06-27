@@ -25,12 +25,12 @@
 
 4. **Apply Your CSS**
 
-  You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and for the show/hide button active/inactive states. Aside from an `overflow: hidden;` CSS attribute applied to the spoilered content, which is automatically handed, and editing of the `height` content's height attribute (how jQuery Spoiler operates), no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
+  You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and for the show/hide button active/inactive states. Aside from an `overflow: hidden;` CSS attribute applied to the spoilered content, which is automatically handed, no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
 
   If you wish for the spoilered content to remain hidden in the case JavaScript has been disabled or is not available on a client device, add an `overflow: hidden;` attribute to the spoiler class in your CSS. Otherwise, the spoilered content will be visible.
 
 ## Options ##
-Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitations) below).
+Most all aspects of jQuery Spoiler can be optionally customized (see [Limitations](#limitations) below).
 
 * **buttonActiveClass**
   * Type: `string`
@@ -50,13 +50,12 @@ Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitat
 * **includePadding**
   * Type: `boolean`
   * Default: `true`
-  * Description: Disables the `paddingValue` option, allowing free usage of `padding-bottom` on spoilered content.
+  * Description: Disables the `paddingValue` option.
 
 * **paddingValue**
-  * Type: `string`
-  * Default: `6px`
-  * Description: Adds a specified amount of padding to the bottom of spoilered content. This prevents spoilered content from being cut off.
-  Uses the `padding-bottom` CSS property, and resets the value back to the initially defined value once the content is hidden. Applied only if the `includePadding` option is set to `true`.
+  * Type: `number`
+  * Default: `6`
+  * Description: Adds a specified amount of padding to the bottom of spoilered content. This prevents spoilered content from being cut off. Negative numbers can be used to decrease the container size (the value of [`Element.scrollHeight`](https://developer.mozilla.org/en-US/docs/Web/API/Element.scrollHeight)).
 
 * **spoilerVisibleClass**
   * Type: `string`

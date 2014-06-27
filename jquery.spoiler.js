@@ -14,7 +14,7 @@
     var settings = $.extend({
       buttonName         : "Spoiler",
       buttonClass        : "btn-spoiler",
-      paddingValue       : "6px",
+      paddingValue       : 6,
       triggerEvents      : false,
       includePadding     : true,
       buttonActiveClass  : "btn-spoiler-active",
@@ -41,7 +41,12 @@
       // as once we hide the text it cannot be restored.
       // Use the value of `scrollHeight`, which does not change
       // even if a height is applied through CSS.
-      spoilerHeights.push($this[0].scrollHeight + "px");
+      var contentHight = $this[0].scrollHeight;
+
+      // Add padding to bottom of container only if enabled
+      contentHight = (settings.includePadding ? $this[0].scrollHeight + settings.paddingValue
+                      : $this[0].scrollHeight);
+      spoilerHeights.push(contentHight + "px");
     });
 
     // Add the toggle button
@@ -67,17 +72,11 @@
       var showContent = {"height": spoilerHeights[spoilerNum]},
           hideContent = {"height": "0"};
 
-      // Add padding to bottom of container only if enabled
-      if (settings.includePadding) {
-        showContent["padding-bottom"] = settings.paddingValue;
-        hideContent["padding-bottom"] = "";
-      }
-
       // Check if content is visible or not
       var contentVisible = $this.hasClass(settings.spoilerVisibleClass);
 
       // Hide/show content
-      if ($this.hasClass(settings.spoilerVisibleClass)) {
+      if (contentVisible) {
         $this.css(hideContent);
       } else {
         $this.css(showContent);
