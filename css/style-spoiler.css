@@ -20,8 +20,8 @@ html {
 
 body {
   font-family: "Roboto", Arial, sans-serif;
-  margin-bottom: 9em;
-  background-color: #fffcfc;
+  margin-bottom: 5em;
+  background-color: #fff9f9;
 }
 
 a {
@@ -41,19 +41,12 @@ ul { list-style: none; }
 li { margin-left: -2.5em; }
 
 pre {
-  font-family: "Coda", monospace;
-/*
-  background-color: #e8dada;
-  overflow: auto;
-  color: #463232;
-  width: 25%;
-  padding: 10px;
-  margin-left: 2.5em;
-  margin-right: 2.5em;
+  width: 18em;
   border-radius: 20px;
-  border: 2px solid rgba(35, 172, 27, 0.72);
-*/
+  border: 2px solid rgba(216, 194, 194, 0.72);
 }
+
+noscript p { color: #f00; }
 
 /* Commonly used alignments and type styles */
 .text-left { text-align: left; }
@@ -74,6 +67,7 @@ pre {
   margin-right: auto;
 }
 
+/* Responsive images */
 @media only screen and (max-width: 720px) {
   .img-responsive {
     width: 100%;
@@ -90,12 +84,38 @@ pre {
 .header h1 { font-size: 4.7em; }
 
 .header p {
-  margin-top: -1.9em;
+  margin-top: -2.5em;
   font-size: 1.1em;
 }
 
 @media only screen and (max-width: 720px) {
   .header h1 { top: 1em; }
+}
+
+/* ------- Usage ------- */
+.usage {
+  position: relative;
+  left: 37.5%;
+}
+
+@media only screen and (max-width: 720px) {
+  .usage {
+    left: 9.5em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .usage {
+    left: 1em;
+    width: 14.5em;
+  }
+}
+
+/* ------- Download ------- */
+.download .ion {
+  font-size: 3em;
+  position: relative;
+  margin-bottom: 0.4em;
 }
 
 /* ------- Footer -------*/
@@ -104,15 +124,8 @@ pre {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 9em;
+  height: 5em;
   width: 100%;
-}
-
-/* ------- Download area ------- */
-.download .ion {
-  font-size: 3em;
-  position: relative;
-  margin-bottom: 0.4em;
 }
 
 /* ------- Spoiler CSS ------- */

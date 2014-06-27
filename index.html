@@ -5,8 +5,9 @@
   <title>jQuery Spoiler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,700|Coda:400">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,700">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" href="lib/prism.css">
   <link rel="stylesheet" href="css/style-spoiler.css">
 </head>
 
@@ -15,8 +16,10 @@
 
   <div class="header text-center">
     <h1>jQuery Spoiler</h1>
-    <p>Minimal, lightweight jQuery spoiler plugin</p>
+    <p class="text-italic">Minimal, lightweight jQuery spoiler plugin</p>
   </div>
+  
+  <noscript><p class="text-center">Uh-oh, it looks like JavaScript is not available on your device. Demos will not be available.</p></noscript>
 
   <div class="text-center">
     <h2>Just how minimal and lightweight?</h2>
@@ -27,27 +30,26 @@
       </ul>
   </div>
 
-<!--  <noscript>Uh-oh, no JavaScript!</noscript>-->
 
   <h1 class="text-center">Usage</h1>
-  <div>
-    <pre>
-    &lt;script&gt;
-      // Basic usage
-      $(".spoiler").spoiler();
+  <pre class="usage language-markup">
+    <code class="language-markup">
+&lt;script&gt;
+  // Basic usage
+  $(".spoiler").spoiler();
 
-      // Enabling some options
-      $(".spoiler").spoiler({
-        buttonName: "Hidden",
-        triggerEvents: true
-      });
-    &lt;/script&gt;
-    </pre>
-  </div>
+  // Enabling some options
+  $(".spoiler").spoiler({
+    buttonName: "Hidden",
+    triggerEvents: true
+  });
+&lt;/script&gt;
+    </code>
+  </pre>
 
   <h1 class="text-center">Download</h1>
   <div class="download text-center">
-    <p class="text-larger"></p>
+    <p class="text-larger"><noscript>Download latest release</noscript></p>
     <a title="Download latest version" href="https://github.com/le717/jquery-spoiler/archive/master.zip"><span class="ion ion-code-download"></span></a>
   </div>
 
@@ -66,11 +68,12 @@
   <div class="footer text-center">
     <p>
       <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">The MIT License</a>
-      <br>Created <span class="current-year"></span> <a target="_blank" href="http://le717.github.io">Triangle717</a>
+      <br>Created 2014 <a target="_blank" href="http://le717.github.io">Triangle717</a>
     </p>
   </div>
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="lib/prism.js"></script>
   <script src="jquery.spoiler.min.js"></script>
 
   <!-- Activate jQuery Spoiler -->
@@ -82,11 +85,6 @@
     (function($) {
     "use strict";
       $(function() {
-        // Get the current year
-        var curYear = new Date().getUTCFullYear();
-        $(".current-year").html(curYear);
-      });
-
       // Get latest release from GitHub Pages API
       $.ajax({
         dataType: "json",
