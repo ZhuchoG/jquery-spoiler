@@ -1,10 +1,10 @@
 {
+  "node"    : true,
   "indent"  : 2,
   "jquery"  : true,
-  "node"    : true,
   "maxlen"  : 100,
-  "quotmark": "double",
   "strict"  : true,
   "undef"   : true,
-  "unused"  : true
+  "unused"  : true,
+  "quotmark": "double"
 }

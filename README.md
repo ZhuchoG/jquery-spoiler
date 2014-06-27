@@ -32,42 +32,52 @@
 ## Options ##
 Most all aspects of jQuery Spoiler can be controlled (see [Limitations](#limitations) below).
 
-* **enablePadding**
+* **buttonActiveClass**
+  * Type: `string`
+  * Default: `btn-spoiler-active`
+  * Description: When spoilered content has been revealed, the button clicked is assigned to this class to indicate the spoiler has been activated. Unlike `buttonClass`, this name can be in any format.
+
+* **buttonClass**
+  * Type: `string`
+  * Default: `btn-spoiler`
+  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `btn-bar` format (see [Limitations](#limitations) below). This class contains a nested `span` element which controls the placement of `buttonName`.
+
+* **buttonName**
+  * Type: `string`
+  * Default: `Spoiler`
+  * Description: The text on every show/hide button.
+
+* **includePadding**
   * Type: `boolean`
   * Default: `true`
-  * Optional: yes
   * Description: Disables the `paddingValue` option, allowing free usage of `padding-bottom` on spoilered content.
 
 * **paddingValue**
   * Type: `string`
   * Default: `6px`
-  * Optional: yes
   * Description: Adds a specified amount of padding to the bottom of spoilered content. This prevents spoilered content from being cut off.
-  Uses the `padding-bottom` CSS property, and resets the value back to the initially defined value once the content is hidden. Applied only if the `paddingValue` option is set to `true`.
-
-* **buttonName**
-  * Type: `string`
-  * Default: `Spoiler`
-  * Optional: yes
-  * Description: The text on every show/hide button.
-
-* **buttonClass**
-  * Type: `string`
-  * Default: `btn-spoiler`
-  * Optional: yes
-  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `btn-bar` format (see [Limitations](#limitations) below). This class contains a nested `span` element which controls the placement of `buttonName`.
-
-* **buttonActiveClass**
-  * Type: `string`
-  * Default: `btn-spoiler-active`
-  * Optional: yes
-  * Description: When spoilered content has been revealed, the button clicked is assigned to this class to indicate the spoiler has been activated. Unlike `buttonClass`, this name can be in any format.
+  Uses the `padding-bottom` CSS property, and resets the value back to the initially defined value once the content is hidden. Applied only if the `includePadding` option is set to `true`.
 
 * **spoilerVisibleClass**
   * Type: `string`
   * Default: `spoiler-visible`
-  * Optional: yes
   * Description: When spoilered content has been revealed, the content now shown is assigned to this class to indicate the content is visible. This is the class any container and expansion/contraction styling would be a part of. Unlike `buttonClass`, this name can be in any format.
+
+* **triggerEvents**
+  * Type: `boolean`
+  * Default: `false`
+  * Description: When enabled, events are fired upon completion of spoilered content being shown and hidden. Listen to them using `jQuery.on()`.
+  ```js
+  // Content shown
+  $(".spoiler").on("contentvisible", function(event) {
+    // Perform action
+  });
+
+  // Content hidden
+  $(".spoiler").on("contenthidden", function(event) {
+    // Perform action
+  });
+  ```
 
 ## Limitations ##
 * You are restricted to button class names (`buttonClass`) that follow the format `btn-bar`. Anything not in this format will cause the script to break.

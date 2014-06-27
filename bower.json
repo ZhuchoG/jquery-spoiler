@@ -1,11 +1,10 @@
 {
     "name": "jquery-spoiler",
     "version": "1.0.2",
-    "main": "jquery.spoiler.js",
+    "main": ["jquery.spoiler.js", "jquery.spoiler.min.js"],
     "ignore": [
         "*.json",
         "*.md",
-        ".*",
         "Gruntfile.js"
     ],
     "dependencies": {
