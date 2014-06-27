@@ -39,6 +39,7 @@ ul { list-style: none; }
 
 li { margin-left: -2.5em; }
 
+/*
 pre {
   background-color: #e8dada;
   overflow: auto;
@@ -51,7 +52,7 @@ pre {
   border-radius: 20px;
   border: 2px solid rgba(35, 172, 27, 0.72);
 }
-
+*/
 
 /* Commonly used alignments and type styles */
 .text-left { text-align: left; }
