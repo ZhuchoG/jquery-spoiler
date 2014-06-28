@@ -1,3 +1,14 @@
+/*
+ * jQuery Spoiler Demo site
+ *
+ * Created 2014 Triangle717
+ * <http://le717.github.io/>
+ *
+ * Licensed under The MIT License
+ * <https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE>
+ */
+
+
 ::-moz-selection {
   background-color: #3399FF;
   color: #fff;
@@ -91,18 +102,18 @@ noscript p { color: #f00; }
 /* ------- Usage ------- */
 .usage {
   position: relative;
-  left: 37.5%;
+  left: 37.8%;
 }
 
-@media only screen and (max-width: 720px) {
-  .usage {
-    left: 9.5em;
-  }
-}
+@media only screen and (max-width: 1055px) { .usage { left: 34.5%; } }
+@media only screen and (max-width: 830px) { .usage { left: 30.5%; } }
+@media only screen and (max-width: 720px) { .usage { left: 27.5%; } }
+@media only screen and (max-width: 470px) { .usage { left: 14.5%; } }
+@media only screen and (max-width: 385px) { .usage { left: 6.5%; } }
 
 @media only screen and (max-width: 320px) {
   .usage {
-    left: 1em;
+    left: 5.5%;
     width: 14.5em;
   }
 }
