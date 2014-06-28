@@ -7,7 +7,19 @@
  * <http://opensource.org/licenses/MIT/>
  */
 
-(function($) {
+(function (factory) {
+  "use strict";
+  if (typeof define === "function" && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(["jquery"], factory);
+  } else if (typeof exports === "object") {
+    // Node/CommonJS style for Browserify
+    module.exports = factory;
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function($) {
   "use strict";
   $.fn.spoiler = function(options) {
     // Default options
@@ -107,4 +119,4 @@
     });
     return this;
   };
-})(jQuery);
+}));
