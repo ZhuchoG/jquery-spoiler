@@ -1,5 +1,5 @@
-# jQuery Spoiler #
-> A simple and customizable spoiler system, all in a jQuery plugin
+# [jQuery Spoiler](http://le717.github.io/jquery-spoiler/) #
+> Minimal, lightweight jQuery spoiler plugin
 
 ## Features ##
 **jQuery Spoiler** is a very minimal and lightweight jQuery-powered spoiler system. With quick setup, very small requirements, and user-controllable styling, jQuery Spoiler puts the developer in control.
@@ -13,7 +13,7 @@
   ```html
   <script src="jquery.spoiler.min.js"></script>
   ```
-  Be sure to include jQuery `>=` 1.10.0 before loading jQuery Spoiler!
+  Be sure to include jQuery `>=` 1.10.0 beforehand!
 
 3. **Wrap and Activate**
   ```html
@@ -32,20 +32,25 @@
 ## Options ##
 Most all aspects of jQuery Spoiler can be optionally customized (see [Limitations](#limitations) below).
 
+* **buttonClass**
+  * Type: `string`
+  * Default: `btn-spoiler`
+  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `btn-bar` format (see [Limitations](#limitations) below). This class contains a nested `div` element which controls the placement of `buttonName`.
+
 * **buttonActiveClass**
   * Type: `string`
   * Default: `btn-spoiler-active`
   * Description: When spoilered content has been revealed, the button clicked is assigned to this class to indicate the spoiler has been activated. Unlike `buttonClass`, this name can be in any format.
 
-* **buttonClass**
-  * Type: `string`
-  * Default: `btn-spoiler`
-  * Description: The class each show/hide button belongs to. Must have the same base as spoilered content class, and must follow the `btn-bar` format (see [Limitations](#limitations) below). This class contains a nested `span` element which controls the placement of `buttonName`.
-
 * **buttonName**
   * Type: `string`
   * Default: `Spoiler`
-  * Description: The text on every show/hide button.
+  * Description: Label for each show/hide button.
+
+* **buttonActiveName**
+  * Type: `string`
+  * Default: `Spoiler`
+  * Description: If different than `buttonName`, specified text will be used as the button label for the currently visible content.
 
 * **includePadding**
   * Type: `boolean`

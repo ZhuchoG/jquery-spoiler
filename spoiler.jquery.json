@@ -1,7 +1,7 @@
 {
     "name": "spoiler",
     "title": "jQuery Spoiler",
-    "description": "A simple and customizable spoiler system, all in a jQuery plugin",
+    "description": "Minimal, lightweight jQuery spoiler plugin",
     "keywords": [
         "spoiler",
         "spoilers"

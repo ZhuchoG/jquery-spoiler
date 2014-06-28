@@ -17,6 +17,7 @@
       paddingValue       : 6,
       triggerEvents      : false,
       includePadding     : true,
+      buttonActiveName   : "Spoiler",
       buttonActiveClass  : "btn-spoiler-active",
       spoilerVisibleClass: "spoiler-visible"
     }, options);
@@ -41,17 +42,16 @@
       // as once we hide the text it cannot be restored.
       // Use the value of `scrollHeight`, which does not change
       // even if a height is applied through CSS.
-      var contentHight = $this[0].scrollHeight;
+      var contentHight = $this.prop("scrollHeight");
 
       // Add padding to bottom of container only if enabled
-      contentHight = (settings.includePadding ? $this[0].scrollHeight + settings.paddingValue
-                      : $this[0].scrollHeight);
+      contentHight = settings.includePadding ? contentHight + settings.paddingValue : contentHight;
       spoilerHeights.push(contentHight + "px");
     });
 
     // Add the toggle button
-    $(this).before("<div class='" + settings.buttonClass + "'><span>" +
-                   settings.buttonName + "</span></div>");
+    $(this).before("<div class='" + settings.buttonClass + "'><div>" +
+                   settings.buttonName + "</div></div>");
 
     // Add matching IDs to each toggle button
     $(buttonClass).each(function() {
@@ -64,36 +64,46 @@
 
     $(buttonClass).on("click", function() {
       // Get the ID for the clicked spoiler button so only that one is triggered
-      var spoilerID = "#" + $(this).attr("id").replace(/btn-/i, ""),
+      var spoilerID  = "#" + $(this).attr("id").replace(/btn-/i, ""),
           spoilerNum = spoilerID.slice(spoilerID.length - 1),
-          $this  = $(spoilerID); // Spoilered content
+          $button    = $(this),
+          $content   = $(spoilerID);
 
       // The container's collapsed/expanded height values
       var showContent = {"height": spoilerHeights[spoilerNum]},
           hideContent = {"height": "0"};
 
       // Check if content is visible or not
-      var contentVisible = $this.hasClass(settings.spoilerVisibleClass);
+      var contentVisible = $content.hasClass(settings.spoilerVisibleClass);
 
       // Hide/show content
       if (contentVisible) {
-        $this.css(hideContent);
+        $content.css(hideContent);
       } else {
-        $this.css(showContent);
+        $content.css(showContent);
       }
 
       // If enabled, trigger events upon show/hide
       if (settings.triggerEvents) {
         if (contentVisible) {
-          $($this).trigger("contenthidden");
+          $content.trigger("contenthidden");
         } else {
-          $($this).trigger("contentvisible");
+          $content.trigger("contentvisible");
         }
       }
 
-      // Toggle between active classes for both button and container
-      $this.toggleClass(settings.spoilerVisibleClass);
-      $(this).toggleClass(settings.buttonActiveClass);
+      // If enabled, display different button label on active state
+      if (settings.buttonActiveName !== settings.buttonName) {
+        if (contentVisible) {
+          $("#" + $button.attr("id") + " div").html(settings.buttonName);
+        } else {
+          $("#" + $button.attr("id") + " div").html(settings.buttonActiveName);
+        }
+      }
+
+      // Toggle between active classes for both container and button
+      $content.toggleClass(settings.spoilerVisibleClass);
+      $button.toggleClass(settings.buttonActiveClass);
     });
     return this;
   };
