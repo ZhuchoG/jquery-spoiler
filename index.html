@@ -7,8 +7,8 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,700">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="lib/prism.css">
-  <link rel="stylesheet" href="css/style-spoiler.css">
+  <link rel="stylesheet" href="lib/prism.min.css">
+  <link rel="stylesheet" href="css/jquery-spoiler-demo.min.css">
 </head>
 
 <body>
@@ -26,6 +26,7 @@
       <ul>
         <li>Only one CSS requirement</li>
         <li>Fully customizable CSS</li>
+        <li>Highly customizable actions</li>
         <li>Small size (&lt; 2KB minified)</li>
       </ul>
   </div>
@@ -49,7 +50,7 @@
 
   <h1 class="text-center">Download</h1>
   <div class="download text-center">
-    <p class="text-larger"><noscript>Download latest release</noscript></p>
+    <p class="text-larger">Download latest revision</p>
     <a title="Download latest version" href="https://github.com/le717/jquery-spoiler/archive/master.zip"><span class="ion ion-code-download"></span></a>
   </div>
 
@@ -93,7 +94,8 @@
           // Download latest release if version number can be gathered
           $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
           $(".download p").html("Latest version: " + data[0].tag_name);
-        }
+          }
+        });
       });
     })(jQuery);
   </script>

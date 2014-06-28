@@ -1,16 +1,12 @@
-/*
 ::-moz-selection {
-  background-color: rgba(35, 172, 27, 0.72);
-  color: #000;
-  text-shadow: none;
+  background-color: #3399FF;
+  color: #fff;
 }
 
 ::selection {
-  background-color: rgba(35, 172, 27, 0.72);
-  color: #000;
-  text-shadow: none;
+  background-color: #3399FF;
+  color: #fff;
 }
-*/
 
 html {
   position: relative;
