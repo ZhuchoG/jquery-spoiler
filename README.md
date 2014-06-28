@@ -94,6 +94,6 @@ If you find a bug or have a suggestion for jQuery Spoiler, feel free to open an 
 You are recommended to use jQuery 2.0 or greater when using jQuery Spoiler. jQuery Spoiler has been successfully tested in Mozilla Firefox, Google Chrome, and Internet Explorer 11. As jQuery 2.0 only supports Internet Explorer 9 or later, consider that to be the minimum supported version. While I am not opposed to patches to fix issues with older browsers, they may not be merged as freely as patches for modern browsers.
 
 ## License ##
-Created 2014 [Triangle717](http://Triangle717.WordPress.com)
+[The MIT License](LICENSE)
 
-[MIT License](LICENSE)
+Created 2014 [Triangle717](http://le717.github.io/)

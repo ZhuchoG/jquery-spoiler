@@ -9,7 +9,7 @@
     "version": "1.0.2",
     "author": {
         "name": "Triangle717",
-        "url": "https://Triangle717.WordPress.com",
+        "url": "http://le717.github.io/",
         "email": "le717.code@yahoo.com"
     },
     "licenses": [
@@ -21,6 +21,7 @@
     "bugs": "https://github.com/le717/jquery-spoiler/issues",
     "homepage": "https://github.com/le717/jquery-spoiler",
     "docs": "https://github.com/le717/jquery-spoiler",
+    "demo": "http://le717.github.io/jquery-spoiler/",
     "dependencies": {
         "jquery": ">=1.10.0"
     }
