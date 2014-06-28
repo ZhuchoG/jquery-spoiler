@@ -27,10 +27,10 @@
         <li>Only one CSS requirement</li>
         <li>Fully customizable CSS</li>
         <li>Highly customizable actions</li>
+        <li>Compatible with all major browsers</li>
         <li>Small size (&lt; 2KB minified)</li>
       </ul>
   </div>
-
 
   <h1 class="text-center">Usage</h1>
   <pre class="usage language-markup">
@@ -55,16 +55,17 @@
   </div>
 
   <h1 class="text-center">Demo</h1>
-  <h4>Demo #1 - Text</h4>
+  <h4>Demo #1</h4>
   <div class="spoiler" id="spoiler-text"><p>Half Life 3 has been confirmed. Really, it has!</p></div>
 
-  <h4>Demo #2 - Image</h4>
+  <h4>Demo #2</h4>
   <div class="spoiler" id="spoiler-image">
-    <img class="img-responsive" width="200" height="200" alt="Triangle717 logo" src="/img/Triangle717-Logo.svg" />
+    <p>"Isn't this an amazing, awe-inspiring image?" "No".</p>
+    <img class="img-responsive" width="300" height="300" alt="Triangle717's' logo" src="/img/Triangle717-Logo.svg" />
   </div>
 
   <h1 class="text-center">Documentation</h1>
-  <p class="text-center text-larger">Complete documention can be found on <a href="https://github.com/le717/jquery-spoiler#readme" target="_blank">GitHub</a>.</p><br>
+  <p class="text-center text-larger">Complete documentation can be found on <a href="https://github.com/le717/jquery-spoiler#readme" target="_blank">GitHub</a>.</p><br>
 
   <div class="footer text-center">
     <p>
@@ -78,26 +79,22 @@
   <script src="jquery.spoiler.min.js"></script>
 
   <!-- Activate jQuery Spoiler -->
-  <script>
-    jQuery(".spoiler").spoiler({enablePadding: false});
-  </script>
+  <script>jQuery(".spoiler").spoiler({enablePadding: false});</script>
 
   <script>
-    (function($) {
-    "use strict";
-      $(function() {
+    jQuery(function() {
+      "use strict";
       // Get latest release from GitHub Pages API
-      $.ajax({
+      jQuery.ajax({
         dataType: "json",
         url: "https://api.github.com/repos/le717/jquery-spoiler/releases",
         success: function(data) {
           // Download latest release if version number can be gathered
-          $(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
-          $(".download p").html("Latest version: " + data[0].tag_name);
-          }
-        });
+          jQuery(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
+          jQuery(".download p").html("Latest version: " + data[0].tag_name);
+        }
       });
-    })(jQuery);
+    });
   </script>
 </body>
 </html>
