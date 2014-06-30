@@ -77,7 +77,12 @@
   <script src="jquery.spoiler.min.js"></script>
 
   <!-- Activate jQuery Spoiler -->
-  <script>jQuery(".spoiler").spoiler({enablePadding: false});</script>
+  <script>
+    jQuery(".spoiler").spoiler({
+      includePadding: false,
+      buttonActiveName: "Hide"
+    });
+  </script>
 
   <script>
     jQuery(function() {

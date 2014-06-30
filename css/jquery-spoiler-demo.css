@@ -152,7 +152,7 @@ noscript p { color: #f00; }
           box-shadow: 0 0 1px 1px rgb(75, 61, 61);
 }
 
-.btn-spoiler span {
+.btn-spoiler div {
   color: #fff;
   position: relative;
   left: 0.45em;
@@ -163,4 +163,4 @@ noscript p { color: #f00; }
 .btn-spoiler-active { background-color: transparent; }
 
 /* Text color when activated */
-.btn-spoiler-active span { color: #000; }
+.btn-spoiler-active div { color: #000; }
