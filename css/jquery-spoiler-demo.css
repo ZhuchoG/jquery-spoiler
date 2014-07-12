@@ -162,5 +162,8 @@ noscript p { color: #f00; }
 /* Button color when activated */
 .btn-spoiler-active { background-color: transparent; }
 
-/* Text color when activated */
-.btn-spoiler-active div { color: #000; }
+/* Text color and position when activated */
+.btn-spoiler-active div {
+  color: #000;
+  margin-left: 0.55em;
+}
