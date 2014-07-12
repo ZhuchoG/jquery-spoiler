@@ -57,7 +57,7 @@
       var contentHight = $this.prop("scrollHeight");
 
       // Add padding to bottom of container only if enabled
-      contentHight = settings.includePadding ? contentHight + settings.paddingValue : contentHight;
+      contentHight = settings.includePadding ? contentHight + parseInt(settings.paddingValue) : contentHight;
       spoilerHeights.push(contentHight + "px");
     });
 
