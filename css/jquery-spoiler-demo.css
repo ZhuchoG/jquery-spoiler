@@ -8,7 +8,6 @@
  * <https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE>
  */
 
-
 ::-moz-selection {
   background-color: #3399FF;
   color: #fff;
@@ -75,9 +74,9 @@ noscript p { color: #f00; }
 }
 
 /* Responsive images */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .img-responsive {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
@@ -95,9 +94,7 @@ noscript p { color: #f00; }
   font-size: 1.1em;
 }
 
-@media only screen and (max-width: 720px) {
-  .header h1 { top: 1em; }
-}
+@media only screen and (max-width: 720px) { .header h1 { top: 1em; } }
 
 /* ------- Usage ------- */
 .usage {
