@@ -1,6 +1,6 @@
 {
     "name": "jquery-spoiler",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "main": [
         "jquery.spoiler.js",
         "jquery.spoiler.min.js"

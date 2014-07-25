@@ -3,10 +3,9 @@ module.exports = function(grunt) {
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
-    banner: "/*\n * <%= pkg.name %> - v<%= pkg.version %>\n" +
-    " * <%= pkg.homepage ? '' + pkg.homepage + '\\n' : '' %>" +
-    " * Created <%= grunt.template.today('yyyy') %> <%= pkg.author %>\n" +
-    " * <%= pkg.license %> License\n */\n",
+    banner: "/*! <%= pkg.name %> v<%= pkg.version %> | " +
+    "<%= grunt.template.today('yyyy') %> <%= pkg.author %> | " +
+    "<%= pkg.license %> License */\n",
 
     // Lint source file
     jshint: {
