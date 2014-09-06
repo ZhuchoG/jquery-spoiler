@@ -6,6 +6,7 @@
 
 ## Installation ##
 1. **Download**
+
   Download either the uncompressed or minified version or the latest [release](https://github.com/le717/jquery-spoiler/releases) (recommended).
 
 2. **Include**
@@ -24,6 +25,7 @@
   ```
 
 4. **Apply Your CSS**
+
   You will want to write applicable CSS to handle the collapsing/expansion of spoilered content and optionally for the visible/hidden state. Aside from an `overflow: hidden` CSS attribute applied to the spoilered content, which is automatically handed, no CSS is edited or even required by jQuery Spoiler. It is all left up to you. See the available options to learn what the default classes are.
 
   If you wish for the spoilered content to remain hidden in the case JavaScript has been disabled or is not available on a client device, add an `overflow: hidden` attribute to the spoilered content's class in your CSS. Otherwise, the spoilered content will be visible.
@@ -68,7 +70,7 @@ jQuery Spoiler can be optionally customized.
   ```
 
 ## Bug Reporting ##
-If you find a bug or have a suggestion for jQuery Spoiler, feel free to open an [issue](https://github.com/le717/jquery-spoiler/issues). Be sure to check if your particular issue has not already been reported or is part of the limitations as listed above first. Pull requests with bug fixes and/or new features are also welcome at any time. :smiley:
+If you find a bug or have a suggestion for jQuery Spoiler, feel free to open an [issue](https://github.com/le717/jquery-spoiler/issues). Be sure to check if your particular issue has not already been reported first. Pull requests with bug fixes and/or new features are also welcome at any time. :smiley:
 
 You are recommended to use jQuery 2.0 or greater when using jQuery Spoiler. jQuery Spoiler has been successfully tested in Mozilla Firefox, Google Chrome, and Internet Explorer 11. As jQuery 2.0 only supports Internet Explorer 9 or later, consider that to be the minimum supported version. While I am not opposed to patches to fix issues with older browsers, they may not be merged as freely as patches for modern browsers.
 
