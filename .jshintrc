@@ -10,5 +10,8 @@
   "undef"   : true,
   "unused"  : true,
   "quotmark": "double",
-  "globals": { "define": true, "require": true }
+  "globals": {
+    "define": true,
+    "require": true
+  }
 }

@@ -1,17 +1,17 @@
 {
-    "name": "jquery-spoiler",
-    "version": "1.1.1",
-    "main": [
-        "jquery.spoiler.js",
-        "jquery.spoiler.min.js"
-    ],
-    "ignore": [
-        "*.json",
-        "CONTRIBUTING.md",
-        "Gruntfile.js",
-        ".*"
-    ],
-    "dependencies": {
-        "jquery": ">=1.10.0"
-    }
+  "name": "jquery-spoiler",
+  "version": "1.1.1",
+  "main": [
+    "jquery.spoiler.js",
+    "jquery.spoiler.min.js"
+  ],
+  "ignore": [
+    "*.json",
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    ".*"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.0"
+  }
 }
