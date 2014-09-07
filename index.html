@@ -39,7 +39,6 @@
 
   // Enabling some options
   $(".spoiler").spoiler({
-    buttonName: "Hidden",
     triggerEvents: true
   });
 &lt;/script&gt;
@@ -54,10 +53,12 @@
 
   <h1 class="text-center">Demo</h1>
   <h4>Demo #1</h4>
-  <div class="spoiler" id="spoiler-text"><p>The meaning of life is 42.</p></div>
+  <div class="spoiler" id="spoiler-text" data-spoiler-link="1"><span>Spoiler</span></div>
+  <div class="spoiler-content" data-spoiler-link="1">The meaning of life is 42.</div>
 
   <h4>Demo #2</h4>
-  <div class="spoiler" id="spoiler-image">
+    <div class="spoiler" id="spoiler-image" data-spoiler-link="2"><span>Spoiler</span></div>
+  <div class="spoiler-content" data-spoiler-link="2">
     <p>"Isn't this an amazing, awe-inspiring image?" "No."</p>
     <img class="img-responsive" width="300" height="300" alt="Triangle717 logo" src="img/Triangle717-Logo.png" />
   </div>
@@ -69,6 +70,7 @@
     <p>
       <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">The MIT License</a>
       <br>Created 2014 <a target="_blank" href="http://le717.github.io">Triangle717</a>
+      <br>With code by With code by <a target="_blank" href="http://jarred.io">Jarred Ballard</a>
     </p>
   </div>
 
@@ -79,8 +81,7 @@
   <!-- Activate jQuery Spoiler -->
   <script>
     jQuery(".spoiler").spoiler({
-      includePadding: false,
-      buttonActiveName: "Hide"
+      includePadding: false
     });
   </script>
 

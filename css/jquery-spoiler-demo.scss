@@ -130,12 +130,12 @@ noscript p { color: #f00; }
 }
 
 // ------- Spoiler CSS
-.spoiler {
+.spoiler-content {
   -webkit-transition: height 0.7s ease-out;
           transition: height 0.7s ease-out;
 }
 
-.btn-spoiler {
+.spoiler {
   width: 4em;
   height: 1.6em;
   background-color: rgba(35, 172, 27, 0.72);
@@ -145,21 +145,10 @@ noscript p { color: #f00; }
   -webkit-box-shadow: 0 0 1px 1px rgb(75, 61, 61);
           box-shadow: 0 0 1px 1px rgb(75, 61, 61);
 
-  div {
+  span {
     color: #fff;
     position: relative;
     left: 0.45em;
     top: 0.1em;
-  }
-}
-
-// Button color when activated
-.btn-spoiler-active {
-  background-color: transparent;
-
-  // Text color and position when activated
-  div {
-    color: #000;
-    margin-left: 0.55em;
   }
 }
