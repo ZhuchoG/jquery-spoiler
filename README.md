@@ -77,4 +77,4 @@ You are recommended to use jQuery 2.0 or greater when using jQuery Spoiler. jQue
 ## License ##
 [The MIT License](LICENSE)
 
-Created 2014 [Triangle717](http://le717.github.io/), with code by [Jarrad Ballard](http://jarred.io)
+Created 2014 [Triangle717](http://le717.github.io/), with code by [Jarred Ballard](http://jarred.io)

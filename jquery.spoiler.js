@@ -5,7 +5,7 @@
  * jQuery Spoiler
  * Created 2014 Triangle717
  * <http://Triangle717.WordPress.com/>
- * With code by Jarrad Ballard
+ * With code by Jarred Ballard
  * <http://jarred.io/>
  *
  * Licensed under The MIT License
