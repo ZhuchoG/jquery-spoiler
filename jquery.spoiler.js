@@ -36,8 +36,8 @@
       spoilerVisibleClass: "spoiler-visible"
     }, options);
 
-      var contentClass   = "." + settings.contentClass,
-          spoilerHeights = [];
+    var contentClass   = "." + settings.contentClass,
+        spoilerHeights = [];
 
     $(contentClass).each(function () {
       var $this = $(this);
