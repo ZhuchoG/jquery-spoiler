@@ -6,10 +6,12 @@
 // Licensed under The MIT License
 // <https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE>
 
-::-moz-selection, ::selection {
+::-moz-selection {
   background-color: #3399FF;
   color: #fff;
 }
+
+::selection { @extend ::-moz-selection; }
 
 html {
   position: relative;
