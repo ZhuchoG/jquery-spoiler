@@ -1,19 +1,12 @@
-/*
- * jQuery Spoiler Demo site
- *
- * Created 2014 Triangle717
- * <http://le717.github.io/>
- *
- * Licensed under The MIT License
- * <https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE>
- */
+---
+---
+// jQuery Spoiler Demo site
+// Created 2014 Triangle717
+// <http://le717.github.io/>
+// Licensed under The MIT License
+// <https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE>
 
-::-moz-selection {
-  background-color: #3399FF;
-  color: #fff;
-}
-
-::selection {
+::-moz-selection, ::selection {
   background-color: #3399FF;
   color: #fff;
 }
@@ -34,8 +27,9 @@ a {
   color: #0058ff;
   text-decoration: none;
   font-weight: 700;
+
+  &:hover { border-bottom: 2px solid #0058ff; }
 }
-a:hover { border-bottom: 2px solid #0058ff; }
 
 p {
   margin-left: 1.5em;
@@ -54,7 +48,7 @@ pre {
 
 noscript p { color: #f00; }
 
-/* Commonly used alignments and type styles */
+// Commonly used alignments and type styles
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -73,7 +67,7 @@ noscript p { color: #f00; }
   margin-right: auto;
 }
 
-/* Responsive images */
+// Responsive images
 @media only screen and (max-width: 800px) {
   .img-responsive {
     max-width: 100%;
@@ -81,49 +75,47 @@ noscript p { color: #f00; }
   }
 }
 
-/* ------- Header -------- */
+// ------- Header
 .header {
   margin-top: -3em;
   margin-bottom: 2.2em;
-}
 
-.header h1 { font-size: 4.7em; }
+  h1 {
+    font-size: 4.7em;
+    @media only screen and (max-width: 720px) { top: 1em; }
+  }
 
-.header p {
-  margin-top: -2.5em;
-  font-size: 1.1em;
-}
-
-@media only screen and (max-width: 720px) { .header h1 { top: 1em; } }
-
-/* ------- Usage ------- */
-.usage {
-  position: relative;
-  left: 37.8%;
-}
-
-@media only screen and (max-width: 1055px) { .usage { left: 34.5%; } }
-@media only screen and (max-width: 830px) { .usage { left: 30.5%; } }
-@media only screen and (max-width: 720px) { .usage { left: 26.5%; } }
-@media only screen and (max-width: 470px) { .usage { left: 14.5%; } }
-@media only screen and (max-width: 385px) { .usage { left: 6.5%; } }
-
-@media only screen and (max-width: 320px) {
-  .usage {
-    left: 5.5%;
-    width: 14.5em;
+  p {
+    margin-top: -2.5em;
+    font-size: 1.1em;
   }
 }
 
-/* ------- Download ------- */
+// ------- Usage
+.usage {
+  position: relative;
+  left: 37.8%;
+
+  @media only screen and (max-width: 1055px) { left: 34.5%; }
+  @media only screen and (max-width: 830px) { left: 30.5%; }
+  @media only screen and (max-width: 720px) { left: 26.5%; }
+  @media only screen and (max-width: 470px) { left: 14.5%; }
+  @media only screen and (max-width: 385px) { left: 6.5%; }
+  @media only screen and (max-width: 320px) {
+      left: 5.5%;
+      width: 14.5em;
+    }
+}
+
+// ------- Download
 .download .ion {
   font-size: 3em;
   position: relative;
   margin-bottom: 0.4em;
 }
 
-/* ------- Footer -------*/
-/* http://mystrd.at/modern-clean-css-sticky-footer/ */
+// ------- Footer
+// http://mystrd.at/modern-clean-css-sticky-footer
 .footer {
   position: absolute;
   left: 0;
@@ -132,7 +124,7 @@ noscript p { color: #f00; }
   width: 100%;
 }
 
-/* ------- Spoiler CSS ------- */
+// ------- Spoiler CSS
 .spoiler {
   -webkit-transition: height 0.7s ease-out;
           transition: height 0.7s ease-out;
@@ -147,20 +139,22 @@ noscript p { color: #f00; }
   cursor: pointer;
   -webkit-box-shadow: 0 0 1px 1px rgb(75, 61, 61);
           box-shadow: 0 0 1px 1px rgb(75, 61, 61);
+
+  div {
+    color: #fff;
+    position: relative;
+    left: 0.45em;
+    top: 0.1em;
+  }
 }
 
-.btn-spoiler div {
-  color: #fff;
-  position: relative;
-  left: 0.45em;
-  top: 0.1em;
-}
+// Button color when activated
+.btn-spoiler-active {
+  background-color: transparent;
 
-/* Button color when activated */
-.btn-spoiler-active { background-color: transparent; }
-
-/* Text color and position when activated */
-.btn-spoiler-active div {
-  color: #000;
-  margin-left: 0.55em;
+  // Text color and position when activated
+  div {
+    color: #000;
+    margin-left: 0.55em;
+  }
 }
