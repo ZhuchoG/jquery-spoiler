@@ -33,7 +33,8 @@
       paddingValue       : 6,
       triggerEvents      : false,
       includePadding     : true,
-      spoilerVisibleClass: "spoiler-visible"
+      buttonActiveClass  : "spoiler-active",
+      spoilerVisibleClass: "spoiler-content-visible"
     }, options);
 
     var contentClass   = "." + settings.contentClass,
@@ -90,8 +91,9 @@
         }
       }
 
-      // Toggle active class
+      // Toggle active classes for both container and button
       $content.toggleClass(settings.spoilerVisibleClass);
+      $this.toggleClass(settings.buttonActiveClass);
     });
     return this;
   };

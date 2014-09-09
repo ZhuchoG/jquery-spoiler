@@ -33,6 +33,11 @@
 ## Options ##
 jQuery Spoiler can be optionally customized.
 
+* **buttonActiveClass**
+  * Type: `string`
+  * Default: `spoiler-active`
+  * Description: When spoilered content has been revealed, the button clicked is given this class to indicate the spoiler has been activated.
+
 * **contentClass**
   * Type: `string`
   * Default: `spoiler-content`
@@ -50,7 +55,7 @@ jQuery Spoiler can be optionally customized.
 
 * **spoilerVisibleClass**
   * Type: `string`
-  * Default: `spoiler-visible`
+  * Default: `spoiler-content-visible`
   * Description: When spoilered content has been revealed, the content now shown is assigned to this class to indicate the content is visible. This is the class any container and expansion/contraction styling would be a part of. Unlike `buttonClass`, this name can be in any format.
 
 * **triggerEvents**
