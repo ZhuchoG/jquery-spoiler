@@ -154,14 +154,12 @@ noscript p { color: #f00; }
   }
 }
 
-// ------- Button color when activated
+// ------- Button when activated
 .spoiler-active {
   background-color: transparent;
 
-  // Text color and position when activated
-  div {
+  span {
     color: #000;
-    margin-left: 0.55em;
   }
 }
 
