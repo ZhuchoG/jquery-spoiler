@@ -102,16 +102,20 @@ h1 { @extend .text-center; }
 
 // ------- Usage
 .usage {
-  position: relative;
-  left: 37.8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+//  position: relative;
+//  left: 37.8%;
 
-  @media only screen and (max-width: 1055px) { left: 34.5%; }
-  @media only screen and (max-width: 830px) { left: 30.5%; }
-  @media only screen and (max-width: 720px) { left: 26.5%; }
-  @media only screen and (max-width: 470px) { left: 14.5%; }
-  @media only screen and (max-width: 385px) { left: 6.5%; }
+//  @media only screen and (max-width: 1055px) { left: 34.5%; }
+//  @media only screen and (max-width: 830px) { left: 30.5%; }
+//  @media only screen and (max-width: 720px) { left: 26.5%; }
+//  @media only screen and (max-width: 470px) { left: 14.5%; }
+//  @media only screen and (max-width: 385px) { left: 6.5%; }
   @media only screen and (max-width: 320px) {
-      left: 5.5%;
+//      left: 5.5%;
       width: 14.5em;
     }
 }
