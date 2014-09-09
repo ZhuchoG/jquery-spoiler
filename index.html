@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <title>jQuery Spoiler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,700">
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="lib/prism.min.css">
-  <link rel="stylesheet" href="css/jquery-spoiler-demo.css">
+  <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto:300,700">
+  <link rel="stylesheet" media="all" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" media="all" href="lib/prism.min.css">
+  <link rel="stylesheet" media="all" href="css/style.css">
+  <link rel="stylesheet" media="print" href="css/print.css">
 </head>
 
 <body>
-  <a target="_blank" href="https://github.com/le717/jquery-spoiler"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <a id="fork-me" target="_blank" href="https://github.com/le717/jquery-spoiler"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
   <div class="header text-center">
     <h1>jQuery Spoiler</h1>
@@ -29,36 +30,40 @@
       </ul>
   </div>
 
-  <h1 class="text-center">Usage</h1>
-  <pre class="usage language-javascript">
-    <code class="language-javascript">// Basic usage
-    $(".spoiler").spoiler();
+  <div class="usage">
+    <h1 class="text-center">Usage</h1>
+    <pre class="usage language-javascript">
+      <code class="language-javascript">// Basic usage
+      $(".spoiler").spoiler();
 
-    // Enabling some options
-    $(".spoiler").spoiler({
-      triggerEvents: true,
-      paddingValue: 20
-    });</code>
-  </pre>
+      // Enabling some options
+      $(".spoiler").spoiler({
+        triggerEvents: true,
+        paddingValue: 20
+      });</code>
+    </pre>
+  </div>
 
-  <h1 class="text-center">Download</h1>
   <div class="download text-center">
+  <h1 class="text-center">Download</h1>
     <p class="text-larger">Download latest revision</p>
     <a title="Download latest version" href="https://github.com/le717/jquery-spoiler/archive/master.zip"><span class="ion ion-code-download"></span></a>
   </div>
 
-  <h1 class="text-center">Demo</h1>
-  <h4>Demo #1</h4>
-  <div class="spoiler" id="spoiler-text" data-spoiler-link="1"><span>Spoiler</span></div>
-  <div class="spoiler-content" data-spoiler-link="1">
-    <blockquote>"...Every day the same thing: Variety. I want something different! Fix me hasenpfeffer right away!" That honorable, royal, majestic, graciousness</blockquote>
-  </div>
+  <div class="demos">
+    <h1 class="text-center">Demo</h1>
+    <h4>Demo #1</h4>
+    <div class="spoiler" id="spoiler-text" data-spoiler-link="1"><span>Spoiler</span></div>
+    <div class="spoiler-content" data-spoiler-link="1">
+      <blockquote>"...Every day the same thing: Variety. I want something different! Fix me hasenpfeffer right away!" That honorable, royal, majestic, graciousness</blockquote>
+    </div>
 
-  <h4>Demo #2</h4>
-  <div class="spoiler" id="spoiler-image" data-spoiler-link="2"><span>Spoiler</span></div>
-  <div class="spoiler-content" data-spoiler-link="2">
-    <p>"Isn't this an amazing, awe-inspiring image?" "No."</p>
-    <img class="img-responsive" width="300" height="300" alt="Triangle717 logo" src="img/Triangle717-Logo.png" />
+    <h4>Demo #2</h4>
+    <div class="spoiler" id="spoiler-image" data-spoiler-link="2"><span>Spoiler</span></div>
+    <div class="spoiler-content" data-spoiler-link="2">
+      <p>"Isn't this an amazing, awe-inspiring image?" "No."</p>
+      <img class="img-responsive" width="300" height="300" alt="Triangle717 logo" src="img/Triangle717-Logo.png" />
+    </div>
   </div>
 
   <h1 class="text-center">Documentation</h1>
@@ -80,7 +85,7 @@
   <script>
     jQuery(".spoiler").spoiler({includePadding: false});
   </script>
-  
+
   <!-- Get latest release from GitHub Pages API -->
   <script>
     jQuery(function() {
