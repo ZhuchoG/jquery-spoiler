@@ -31,16 +31,14 @@
 
   <h1 class="text-center">Usage</h1>
   <pre class="usage language-javascript">
-    <code class="language-javascript">
-    // Basic usage
+    <code class="language-javascript">// Basic usage
     $(".spoiler").spoiler();
 
     // Enabling some options
     $(".spoiler").spoiler({
       triggerEvents: true,
       paddingValue: 20
-    });
-    </code>
+    });</code>
   </pre>
 
   <h1 class="text-center">Download</h1>
@@ -80,20 +78,18 @@
 
   <!-- Activate jQuery Spoiler -->
   <script>
-    jQuery(".spoiler").spoiler({
-      includePadding: false
-    });
+    jQuery(".spoiler").spoiler({includePadding: false});
   </script>
-
+  
+  <!-- Get latest release from GitHub Pages API -->
   <script>
     jQuery(function() {
       "use strict";
-      // Get latest release from GitHub Pages API
       jQuery.ajax({
         dataType: "json",
         url: "https://api.github.com/repos/le717/jquery-spoiler/releases",
         success: function(data) {
-          // Download latest release if version number can be gathered
+          // Use latest release for download if version number can be gathered
           jQuery(".download a").attr("href", "https://github.com/le717/jquery-spoiler/archive/" + data[0].tag_name + ".zip");
           jQuery(".download p").html("Latest version: " + data[0].tag_name);
         }
