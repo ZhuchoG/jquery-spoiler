@@ -10,4 +10,5 @@
 // Hide unnecessary elements
 noscript,
 #fork-me,
-.demos { display: none; }
+.demos,
+.download a { display: none; }
