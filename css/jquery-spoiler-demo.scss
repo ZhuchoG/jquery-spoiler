@@ -129,7 +129,7 @@ noscript p { color: #f00; }
   width: 100%;
 }
 
-// ------- Spoiler CSS
+// ------- Spoiler movement
 .spoiler-content {
   -webkit-transition: height 0.7s ease-out;
           transition: height 0.7s ease-out;
@@ -153,3 +153,15 @@ noscript p { color: #f00; }
     top: 0.1em;
   }
 }
+
+// ------- Button color when activated
+.spoiler-active {
+  background-color: transparent;
+
+  // Text color and position when activated
+  div {
+    color: #000;
+    margin-left: 0.55em;
+  }
+}
+
