@@ -50,12 +50,12 @@
       // as once we hide the text it cannot be restored.
       // Use the value of `scrollHeight`, which does not change
       // even if a height is applied through CSS.
-      var contentHight = $this.prop("scrollHeight");
+      var contentHeight = $this.prop("scrollHeight");
 
       // Add padding to bottom of container only if enabled
-      contentHight = (settings.includePadding ?
-                      contentHight + parseInt(settings.paddingValue, 10) : contentHight);
-      spoilerHeights.push(contentHight + "px");
+      contentHeight = (settings.includePadding ?
+                      contentHeight + parseInt(settings.paddingValue, 10) : contentHeight);
+      spoilerHeights.push(contentHeight + "px");
 
       // Now that we have the height, hide all content
       $this.css("height", "0");
