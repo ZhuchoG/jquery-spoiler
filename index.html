@@ -23,11 +23,11 @@
 
   <div class="text-center">
     <h2>Just how minimal and lightweight?</h2>
-      <ul>
-        <li>Only one CSS requirement</li>
-        <li>Highly customizable</li>
-        <li>Small size (&lt; 2KB minified)</li>
-      </ul>
+    <ul>
+      <li>Only one CSS requirement</li>
+      <li>Highly customizable</li>
+      <li>Small size (&lt; 2KB minified)</li>
+    </ul>
   </div>
 
   <div class="how-to-use">
@@ -70,8 +70,7 @@
   <p class="text-center text-larger">Complete documentation can be found on <a href="https://github.com/le717/jquery-spoiler#readme" target="_blank">GitHub</a>.</p><br>
 
   <div class="footer">
-    <p>
-      <a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">The MIT License</a>
+    <p><a target="_blank" href="https://raw.githubusercontent.com/le717/jquery-spoiler/master/LICENSE">The MIT License</a>
       <br>Created 2014 <a target="_blank" href="http://le717.github.io">Triangle717</a>
       <br>With code by <a target="_blank" href="http://jarred.io">Jarred Ballard</a>
     </p>
@@ -80,16 +79,13 @@
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="lib/prism.js"></script>
   <script src="jquery.spoiler.min.js"></script>
-
-  <!-- Activate jQuery Spoiler -->
-  <script>
-    jQuery(".spoiler").spoiler({includePadding: false});
-  </script>
-
-  <!-- Get latest release from GitHub Pages API -->
   <script>
     jQuery(function() {
       "use strict";
+      // Activate jQuery Spoiler
+      jQuery(".spoiler").spoiler({includePadding: false});
+
+      // Get latest release from GitHub Pages API
       jQuery.ajax({
         dataType: "json",
         url: "https://api.github.com/repos/le717/jquery-spoiler/releases",
