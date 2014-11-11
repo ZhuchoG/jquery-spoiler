@@ -64,17 +64,17 @@ jQuery Spoiler can be optionally customized.
   * Description: When enabled, events are fired upon completion of spoilered content being shown and hidden. Listen to them using `jQuery.on()`.
   ```js
   // Content shown
-  jQuery(".spoiler").on("contentvisible", function(e) {
+  jQuery(".spoiler").on("jq-spoiler-visible", function() {
     // Perform action
   });
 
   // Content hidden
-  jQuery(".spoiler").on("contenthidden", function(e) {
+  jQuery(".spoiler").on("jq-spoiler-hidden", function() {
     // Perform action
   });
   ```
 
-## Bug Reporting ##
+## Contributing ##
 If you find a bug or have a suggestion for jQuery Spoiler, feel free to open an [issue](https://github.com/le717/jquery-spoiler/issues). Be sure to check if your particular issue has not already been reported first. Pull requests with bug fixes and/or new features are also welcome at any time. :smiley:
 
 You are recommended to use jQuery 2.0 or greater when using jQuery Spoiler. jQuery Spoiler has been successfully tested in Mozilla Firefox, Google Chrome, and Internet Explorer 11. As jQuery 2.0 only supports Internet Explorer 9 or later, consider that to be the minimum supported version. While I am not opposed to patches to fix issues with older browsers, they may not be merged as freely as patches for modern browsers.

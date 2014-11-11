@@ -1,10 +1,11 @@
 /*jslint browser: true, vars: true, devel: true, nomen: true, maxerr: 50 */
-/*global jQuery, define, module, exports */
+/*global module, exports */
 
 /*
  * jQuery Spoiler
  * Created 2014 Triangle717
  * <http://Triangle717.WordPress.com/>
+ *
  * With code by Jarred Ballard
  * <http://jarred.io/>
  *
@@ -27,7 +28,6 @@
 }(function ($) {
   "use strict";
   $.fn.spoiler = function (options) {
-    // Default options
     var settings = $.extend({
       contentClass       : "spoiler-content",
       paddingValue       : 6,
@@ -86,9 +86,9 @@
       // If enabled, trigger events upon show/hide
       if (settings.triggerEvents) {
         if (isVisible) {
-          $this.trigger("contenthidden");
+          $this.trigger("jq-spoiler-hidden");
         } else {
-          $this.trigger("contentvisible");
+          $this.trigger("jq-spoiler-visible");
         }
       }
 
