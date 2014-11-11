@@ -1,10 +1,11 @@
 /*jslint browser: true, vars: true, devel: true, nomen: true, maxerr: 50 */
-/*global jQuery, define, module, exports */
+/*global module, exports */
 
 /*
  * jQuery Spoiler
  * Created 2014 Triangle717
  * <http://Triangle717.WordPress.com/>
+ *
  * With code by Jarred Ballard
  * <http://jarred.io/>
  *
@@ -27,7 +28,6 @@
 }(function ($) {
   "use strict";
   $.fn.spoiler = function (options) {
-    // Default options
     var settings = $.extend({
       contentClass       : "spoiler-content",
       paddingValue       : 6,
@@ -38,7 +38,7 @@
     }, options);
 
     var contentClass   = "." + settings.contentClass,
-        spoilerHeights = [];
+        spoilerHeights = {};
 
     $(contentClass).each(function () {
       var $this = $(this);
@@ -50,12 +50,13 @@
       // as once we hide the text it cannot be restored.
       // Use the value of `scrollHeight`, which does not change
       // even if a height is applied through CSS.
-      var contentHight = $this.prop("scrollHeight");
+      var contentHeight = $this.prop("scrollHeight");
 
       // Add padding to bottom of container only if enabled
-      contentHight = (settings.includePadding ?
-                      contentHight + parseInt(settings.paddingValue, 10) : contentHight);
-      spoilerHeights.push(contentHight + "px");
+      contentHeight = (settings.includePadding ?
+                      contentHeight + parseInt(settings.paddingValue, 10) : contentHeight);
+      var spoiler  = $this.attr("data-spoiler-link");
+      spoilerHeights[spoiler] = contentHeight + "px";
 
       // Now that we have the height, hide all content
       $this.css("height", "0");
@@ -69,7 +70,7 @@
           $content = $(contentClass + "[data-spoiler-link=" + spoiler + "]");
 
       // The container's collapsed/expanded height values
-      var showContent = {"height": spoilerHeights[spoiler - 1]},
+      var showContent = {"height": spoilerHeights[spoiler]},
           hideContent = {"height": "0"};
 
       // Check if content is visible or not
@@ -85,9 +86,9 @@
       // If enabled, trigger events upon show/hide
       if (settings.triggerEvents) {
         if (isVisible) {
-          $this.trigger("contenthidden");
+          $this.trigger("jq-spoiler-hidden");
         } else {
-          $this.trigger("contentvisible");
+          $this.trigger("jq-spoiler-visible");
         }
       }
 
