@@ -1,13 +1,11 @@
 module.exports = function(grunt) {
   "use strict";
-  // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     banner: "/*! <%= pkg.name %> v<%= pkg.version %> | " +
     "<%= grunt.template.today('yyyy') %> <%= pkg.author %> | " +
     "<%= pkg.license %> License */\n",
 
-    // Lint source file
     jshint: {
       src: {
         options: {
