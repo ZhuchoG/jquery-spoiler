@@ -38,7 +38,7 @@
     }, options);
 
     var contentClass   = "." + settings.contentClass,
-        spoilerHeights = [];
+        spoilerHeights = {};
 
     $(contentClass).each(function () {
       var $this = $(this);
@@ -55,7 +55,8 @@
       // Add padding to bottom of container only if enabled
       contentHeight = (settings.includePadding ?
                       contentHeight + parseInt(settings.paddingValue, 10) : contentHeight);
-      spoilerHeights.push(contentHeight + "px");
+      var spoiler  = $this.attr("data-spoiler-link");
+      spoilerHeights[spoiler] = contentHeight + "px";
 
       // Now that we have the height, hide all content
       $this.css("height", "0");
@@ -69,7 +70,7 @@
           $content = $(contentClass + "[data-spoiler-link=" + spoiler + "]");
 
       // The container's collapsed/expanded height values
-      var showContent = {"height": spoilerHeights[spoiler - 1]},
+      var showContent = {"height": spoilerHeights[spoiler]},
           hideContent = {"height": "0"};
 
       // Check if content is visible or not
