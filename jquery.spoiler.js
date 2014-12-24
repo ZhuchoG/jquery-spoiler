@@ -1,5 +1,5 @@
 /*jslint browser: true, vars: true, devel: true, nomen: true, maxerr: 50 */
-/*global module, exports */
+/*global module, exports, define, jQuery */
 
 /*
  * jQuery Spoiler
@@ -37,15 +37,18 @@
       spoilerVisibleClass: "spoiler-content-visible"
     }, options);
 
-    var contentClass   = "." + settings.contentClass,
+    var showContent    = {"height": "0"},
+        hideContent    = {"height": "0"},
+        contentClass   = "." + settings.contentClass,
         spoilerHeights = {};
 
-    $(contentClass).each(function () {
-      var $this = $(this);
-      // The only CSS requirement for this to work for the spoilered content
-      // to have an overflow: hidden rule applied.
-      $this.css("overflow", "hidden");
 
+    /**
+     * Set and/or update the spoiler height.
+     * @param {jQuery} $this The current spoiler.
+     * @returns {String} The content height, expressed in pixels.
+     */
+    function setHeight($this) {
       // Get the height of the content to be spoilered now,
       // as once we hide the text it cannot be restored.
       // Use the value of `scrollHeight`, which does not change
@@ -54,25 +57,12 @@
 
       // Add padding to bottom of container only if enabled
       contentHeight = (settings.includePadding ?
-                      contentHeight + parseInt(settings.paddingValue, 10) : contentHeight);
-      var spoiler  = $this.attr("data-spoiler-link");
-      spoilerHeights[spoiler] = contentHeight + "px";
-
-      // Now that we have the height, hide all content
-      $this.css("height", "0");
-    });
+                       contentHeight + parseInt(settings.paddingValue, 10) : contentHeight);
+      return contentHeight + "px";
+    }
 
 
-    $(this).on("click", function () {
-      // Get the ID for the clicked spoiler button so only that one is triggered
-      var $this    = $(this),
-          spoiler  = $this.attr("data-spoiler-link"),
-          $content = $(contentClass + "[data-spoiler-link=" + spoiler + "]");
-
-      // The container's collapsed/expanded height values
-      var showContent = {"height": spoilerHeights[spoiler]},
-          hideContent = {"height": "0"};
-
+    function spoilerAction($this, $content) {
       // Check if content is visible or not
       var isVisible = $content.hasClass(settings.spoilerVisibleClass);
 
@@ -95,6 +85,36 @@
       // Toggle active classes for both container and button
       $content.toggleClass(settings.spoilerVisibleClass);
       $this.toggleClass(settings.buttonActiveClass);
+      return true;
+    }
+
+
+    $(contentClass).each(function () {
+      var $this = $(this);
+      // The only CSS requirement is for the spoilered content
+      // to have an overflow: hidden rule applied.
+      $this.css("overflow", "hidden");
+      var id = $this.attr("data-spoiler-link");
+
+      // Set the height of the content to be spoilered
+      spoilerHeights[id] = setHeight($this);
+
+      // Now that we have the height, hide the content
+      $this.css("height", "0");
+    });
+
+
+    $(this).on("click", function () {
+      // Get the ID for the clicked spoiler button so only that one is triggered
+      var $this    = $(this),
+          spoiler  = $this.attr("data-spoiler-link"),
+          $content = $(contentClass + "[data-spoiler-link=" + spoiler + "]");
+
+      // Set the height
+      showContent.height = spoilerHeights[spoiler];
+
+      // Perform the show/hide actions
+      spoilerAction($this, $content);
     });
     return this;
   };
