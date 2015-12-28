@@ -28,6 +28,12 @@
 }(function ($) {
   "use strict";
   $.fn.spoiler = function (options) {
+    
+    if (options === "update") {
+//      showContent.height = setHeight($content, spoiler);
+      return this;
+    }
+    
     var settings = $.extend({
       contentClass       : "spoiler-content",
       paddingValue       : 6,
@@ -62,9 +68,9 @@
     }
 
 
-    function spoilerAction($this, $content) {
+    function spoilerAction($this, $content, restart) {
       // Check if content is visible or not
-      var isVisible = $content.hasClass(settings.spoilerVisibleClass);
+      var isVisible = restart !== undefined ? restart : $content.hasClass(settings.spoilerVisibleClass);
 
       // Toggle content visibility
       if (isVisible) {
@@ -80,6 +86,13 @@
         } else {
           $this.trigger("jq-spoiler-visible");
         }
+      }
+
+      // Add the visible classes as they should be
+      if (restart !== undefined && !restart) {
+        $content.addClass(settings.spoilerVisibleClass);
+        $this.addClass(settings.buttonActiveClass);
+        return true;
       }
 
       // Toggle active classes for both container and button
@@ -112,6 +125,12 @@
 
       // Set the height
       showContent.height = spoilerHeights[spoiler];
+
+      // Update the height if the content was changed
+//      $content.on("jq-spoiler-change", function() {
+//        showContent.height = setHeight($content, spoiler);
+//        spoilerAction($this, $content, false);
+//      });
 
       // Perform the show/hide actions
       spoilerAction($this, $content);
